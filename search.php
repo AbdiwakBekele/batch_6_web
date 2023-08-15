@@ -16,15 +16,17 @@
 
     <table class="table w-50 table-hover">
         <tr>
-            <th>User ID</th>
             <th>User Name</th>
             <th>User Email</th>
+            <th>User Age</th>
         </tr>
         <?php
     require("db.php");
     if($con){
 
-        $sql = "SELECT * FROM user ";
+        $user_id = $_POST['user_id'];
+
+        $sql = "SELECT * FROM user WHERE user_id = '$user_id' ";
         $result = mysqli_query($con, $sql);
 
         if($result){
@@ -32,9 +34,9 @@
                 ?>
 
         <tr>
-            <td> <?php echo $row['user_id']; ?> </td>
             <td> <?php echo $row['username']; ?> </td>
             <td> <?php echo $row['user_email']; ?> </td>
+            <td> <?php echo $row['user_age']; ?> </td>
         </tr>
         <?php 
             }

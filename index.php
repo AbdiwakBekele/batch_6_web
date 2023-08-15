@@ -27,6 +27,15 @@
     <h1>Read Data</h1>
     <a href="read_user.php">Show</a>
 
+    <hr>
+
+    <h1> Search User </h1>
+    <form action="search.php" method="POST">
+        <label for="user_id"> User ID</label>
+        <input type="text" name="user_id" id="user_id">
+        <input type="submit" value="Search">
+    </form>
+
 </body>
 
 </html>
