@@ -21,10 +21,11 @@
             <th>User Email</th>
         </tr>
         <?php
+        
     require("db.php");
     if($con){
 
-        $sql = "SELECT * FROM user ";
+        $sql = "SELECT * FROM user";
         $result = mysqli_query($con, $sql);
 
         if($result){

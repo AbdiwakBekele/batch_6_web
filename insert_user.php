@@ -18,7 +18,6 @@
     <?php 
 
     require("db.php");
-
     if($con){
 
         $username = $_POST['fullname'];
