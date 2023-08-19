@@ -51,6 +51,16 @@
         <input type="submit">
     </form>
 
+
+    <hr>
+
+    <h1> Delete User </h1>
+    <form action="delete.php" method="POST">
+        <label for="user_id"> User ID</label>
+        <input type="text" name="user_id" id="user_id">
+        <input type="submit" value="Delete">
+    </form>
+
 </body>
 
 </html>

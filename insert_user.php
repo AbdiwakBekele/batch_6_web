@@ -23,7 +23,7 @@
         $username = $_POST['fullname'];
         $age = $_POST['age'];
         $email = $_POST['email'];
-        $password = $_POST['password'];
+        $password = md5($_POST['password']);
 
        // Create Data
         $sql = "INSERT INTO user (username, user_age, user_email, user_password) 

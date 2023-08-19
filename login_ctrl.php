@@ -4,7 +4,7 @@ require('db.php');
 
 if($con){
     $email = $_POST['email'];
-    $password = $_POST['password'];
+    $password = md5($_POST['password']);
 
     $sql = "SELECT * FROM user WHERE user_email = '$email' AND user_password='$password' ";
     $result = mysqli_query($con, $sql);
