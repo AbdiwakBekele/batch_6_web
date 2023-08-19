@@ -16,6 +16,7 @@
 
     <table class="table w-50 table-hover">
         <tr>
+            <th> No. </th>
             <th>User ID</th>
             <th>User Name</th>
             <th>User Email</th>
@@ -29,10 +30,12 @@
         $result = mysqli_query($con, $sql);
 
         if($result){
+            $index = 0;
             while($row = mysqli_fetch_assoc($result)){
                 ?>
 
         <tr>
+            <td> <?php echo ++$index; ?> </td>
             <td> <?php echo $row['user_id']; ?> </td>
             <td> <?php echo $row['username']; ?> </td>
             <td> <?php echo $row['user_email']; ?> </td>
