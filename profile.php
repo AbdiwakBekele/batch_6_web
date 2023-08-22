@@ -24,6 +24,9 @@ if(!isset($_SESSION["username"])){
 
     <hr>
 
+    <a href="select_profile.php">Upload Profile Picture</a>
+    <br>
+
     <a href="update_profile.php">Update Profile</a>
 
     <table class="table w-50 table-hover">
@@ -51,6 +54,8 @@ if(!isset($_SESSION["username"])){
             <td> <?php echo $row['username']; ?> </td>
             <td> <?php echo $row['user_email']; ?> </td>
         </tr>
+        <br>
+        <img src="<?php echo $row['profile_img']?>" width="100px">
         <?php 
             }
         }
@@ -60,6 +65,11 @@ if(!isset($_SESSION["username"])){
 ?>
 
     </table>
+    <hr>
+
+    <a href="my_products.php"> My Products </a>
+
+    <a href="add_products.php"> Add new products </a>
 
 </body>
 
