@@ -14,6 +14,7 @@ session_start();
         $result = mysqli_query($con, $sql);
 
         if($result){
+            $_SESSION['response_success'] = "Successfully Picture Uploaded";
             header('Location: profile.php');
         }else{
             echo "Error Updating";

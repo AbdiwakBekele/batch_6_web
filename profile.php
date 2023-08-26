@@ -24,6 +24,15 @@ if(!isset($_SESSION["username"])){
 
     <hr>
 
+    <?php 
+    if(isset($_SESSION['response_success'])){
+        echo $_SESSION['response_success'] . '<br>';
+        unset($_SESSION['response_success']);
+        
+    }
+    
+    ?>
+
     <a href="select_profile.php">Upload Profile Picture</a>
     <br>
 
@@ -70,6 +79,8 @@ if(!isset($_SESSION["username"])){
     <a href="my_products.php"> My Products </a>
 
     <a href="add_products.php"> Add new products </a>
+
+    <a href="edit_product.php?product_id=<?php echo $row['product_id'] ?>"> Edit product </a>
 
 </body>
 
